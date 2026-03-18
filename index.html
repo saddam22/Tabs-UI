@@ -9,29 +9,46 @@
 </head>
 <body class="bg-gray-100 p-6">
 
-<div class="max-w-xl mx-auto bg-white rounded-lg shadow-md">
-	<!-- Tabs Header -->
-	<div class="flex border-b border-gray-200">
-		<button class="tab-btn px-4 py-2 text-gray-600 font-medium border-b-2 border-transparent focus:outline-none active" data-tab="tab1">Tab 1</button>
-		<button class="tab-btn px-4 py-2 text-gray-600 font-medium border-b-2 border-transparent focus:outline-none" data-tab="tab2">Tab 2</button>
-		<button class="tab-btn px-4 py-2 text-gray-600 font-medium border-b-2 border-transparent focus:outline-none" data-tab="tab3">Tab 3</button>
-	</div>
- 	<!-- Tabs Content -->
- 	<div class="p-4">
- 		<div id="tab1" class="tab-content">
- 		<h2 class="text-xl font-semibold mb-2">Tab 1 Content</h2>
-        <p>This is the content for Tab 1. You can put anything here, like text, images, or forms.</p>
- 		</div>
- 		 <div id="tab2" class="tab-content hidden">
-        <h2 class="text-xl font-semibold mb-2">Tab 2 Content</h2>
-        <p>This is the content for Tab 2. Add your own information or components here.</p>
+  <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+    <!-- Tabs Header -->
+    <div class="flex border-b border-gray-200 bg-gray-50">
+      <button class="tab-btn flex-1 px-6 py-4 text-gray-500 hover:text-blue-600 hover:border-blue-400 border-b-4 border-transparent transition-all duration-300 flex items-center justify-center gap-2 active" data-tab="tab1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />
+        </svg>
+        Overview
+      </button>
+      <button class="tab-btn flex-1 px-6 py-4 text-gray-500 hover:text-blue-600 hover:border-blue-400 border-b-4 border-transparent transition-all duration-300 flex items-center justify-center gap-2" data-tab="tab2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Details
+      </button>
+      <button class="tab-btn flex-1 px-6 py-4 text-gray-500 hover:text-blue-600 hover:border-blue-400 border-b-4 border-transparent transition-all duration-300 flex items-center justify-center gap-2" data-tab="tab3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Stats
+      </button>
+    </div>
+
+    <!-- Tabs Content -->
+    <div class="p-6">
+      <div id="tab1" class="tab-content transition-opacity duration-500">
+        <h2 class="text-2xl font-semibold mb-4">Overview Section</h2>
+        <p class="text-gray-700">This is the overview content. You can describe your project, service, or dashboard summary here with a nice layout and images if needed.</p>
       </div>
-      <div id="tab3" class="tab-content hidden">
-        <h2 class="text-xl font-semibold mb-2">Tab 3 Content</h2>
-        <p>This is the content for Tab 3. Perfect for showing multiple sections in the same area.</p>
-      </div>	
- 	</div>
-</div>
+      <div id="tab2" class="tab-content hidden transition-opacity duration-500">
+        <h2 class="text-2xl font-semibold mb-4">Details Section</h2>
+        <p class="text-gray-700">Here you can provide detailed information. Add tables, images, or descriptive text. Tailwind makes it easy to style everything neatly.</p>
+      </div>
+      <div id="tab3" class="tab-content hidden transition-opacity duration-500">
+        <h2 class="text-2xl font-semibold mb-4">Stats Section</h2>
+        <p class="text-gray-700">Statistics or reports can go here. Perfect for dashboards, admin panels, or analytics pages. You can even include charts using Chart.js or other libraries.</p>
+      </div>
+    </div>
+  </div>
+
 
 <script src="script.js"></script>
 </body>
